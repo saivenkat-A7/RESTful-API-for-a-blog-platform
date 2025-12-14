@@ -157,7 +157,119 @@ Server running on port 3000
 **6. Get Posts by Author**
 **GET** ```/authors/:id/posts```
 **Response (200):**
+```
+[
+  {
+    "id": 1,
+    "title": "Learning Node.js",
+    "content": "Node.js is awesome!",
+    "authorId": 1,
+    "createdAt": "2025-12-14T07:25:09.585Z",
+    "updatedAt": "2025-12-14T07:25:09.585Z"
+  }
+]
+```
+---
 
+
+**Posts Endpoints**
+
+**1. Create Post**
+**POST** ```/posts```
+**Body:**
+```
+{
+  "title": "Learning Node.js",
+  "content": "Node.js is awesome!",
+  "authorId": 1
+}
+```
+**Response (201):**
+```
+{
+  "id": 1,
+  "title": "Learning Node.js",
+  "content": "Node.js is awesome!",
+  "authorId": 1,
+  "createdAt": "2025-12-14T07:25:09.585Z",
+  "updatedAt": "2025-12-14T07:25:09.585Z"
+}
+```
+**If author does not exist (400):**
+```
+{
+  "message": "Author does not exist"
+}
+```
+**2. Get All Posts**
+**GET** ```/posts```
+**Response (200):**
+```
+[
+  {
+    "id": 1,
+    "title": "Learning Node.js",
+    "content": "Node.js is awesome!",
+    "authorId": 1,
+    "Author": {
+      "name": "John",
+      "email": "john@example.com"
+    }
+  }
+]
+```
+**3. Get Post by ID**
+**GET** ```/posts/:id```
+**Response (200):**
+```
+{
+  "id": 1,
+  "title": "Learning Node.js",
+  "content": "Node.js is awesome!",
+  "authorId": 1,
+  "Author": {
+    "name": "John",
+    "email": "john@example.com"
+  }
+}
+```
+**4. Update Post**
+**PUT** ```/posts/:id```
+**Body:**
+```
+{
+  "title": "React",
+  "content": "React is library"
+}
+```
+**Response (200):**
+```
+{
+  "id": 1,
+  "title": "React",
+  "content": "React is library",
+  "authorId": 1,
+  "createdAt": "2025-12-14T07:25:09.585Z",
+  "updatedAt": "2025-12-14T07:35:00.000Z"
+}
+```
+**5. Delete Post**
+**DELETE** ```/posts/:id```
+**Response (200):**
+```
+{
+  "message": "Post deleted"
+}
+```
+### Testing the API
+
+**You can test the API using:**
+
+cURL commands (as shown above)
+
+**Postman or Thunder Client**
+
+Browser (for GET requests only)
 
 
 
