@@ -78,9 +78,9 @@ Server running on port 3000
 **Base URL**: http://localhost:3000
 
 ### Authors Endpoints
-**1. Create Author**
-**POST** ```/authors```
-**Body:**
+### **1. Create Author**
+### **POST** ```/authors```
+### **Body:**
 ```
 {
   "name": "John",
@@ -97,9 +97,9 @@ Server running on port 3000
   "updatedAt": "2025-12-14T07:25:09.585Z"
 }
 ```
-**2. Get All Authors**
-**GET** ```/authors```
-**Response (200):**
+### **2. Get All Authors**
+### **GET** ```/authors```
+### **Response (200):**
 ```
 [
   {
