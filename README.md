@@ -111,9 +111,9 @@ Server running on port 3000
   }
 ]
 ```
-**3. Get Author by ID**
-**GET** ```/authors/:id```
-**Response (200):**
+### **3. Get Author by ID**
+### **GET** ```/authors/:id```
+### **Response (200):**
 ```
 {
   "id": 1,
@@ -129,9 +129,9 @@ Server running on port 3000
   "message": "Author not found"
 }
 ```
-**4. Update Author**
-**PUT** ```/authors/:id```
-**Body:**
+### **4. Update Author**
+### **PUT** ```/authors/:id```
+### **Body:**
 ```{
   "name": "venkat"
 }
@@ -146,17 +146,17 @@ Server running on port 3000
   "updatedAt": "2025-12-14T07:30:00.000Z"
 }
 ```
-**5. Delete Author**
-**DELETE ** ```/authors/:id```
-**Response (200):**
+### **5. Delete Author**
+### **DELETE** ```/authors/:id```
+### **Response (200):**
 ```
 {
   "message": "Author deleted (posts cascaded)"
 }
 ```
-**6. Get Posts by Author**
-**GET** ```/authors/:id/posts```
-**Response (200):**
+### **6. Get Posts by Author**
+### **GET** ```/authors/:id/posts```
+### **Response (200):**
 ```
 [
   {
@@ -172,11 +172,11 @@ Server running on port 3000
 ---
 
 
-**Posts Endpoints**
+### **Posts Endpoints**
 
-**1. Create Post**
-**POST** ```/posts```
-**Body:**
+### **1. Create Post**
+### **POST** ```/posts```
+### **Body:**
 ```
 {
   "title": "Learning Node.js",
@@ -201,9 +201,9 @@ Server running on port 3000
   "message": "Author does not exist"
 }
 ```
-**2. Get All Posts**
-**GET** ```/posts```
-**Response (200):**
+### **2. Get All Posts**
+### **GET** ```/posts```
+### **Response (200):**
 ```
 [
   {
@@ -218,9 +218,9 @@ Server running on port 3000
   }
 ]
 ```
-**3. Get Post by ID**
-**GET** ```/posts/:id```
-**Response (200):**
+### **3. Get Post by ID**
+### **GET** ```/posts/:id```
+### **Response (200):**
 ```
 {
   "id": 1,
@@ -233,9 +233,9 @@ Server running on port 3000
   }
 }
 ```
-**4. Update Post**
-**PUT** ```/posts/:id```
-**Body:**
+### **4. Update Post**
+### **PUT** ```/posts/:id```
+### **Body:**
 ```
 {
   "title": "React",
@@ -253,9 +253,9 @@ Server running on port 3000
   "updatedAt": "2025-12-14T07:35:00.000Z"
 }
 ```
-**5. Delete Post**
-**DELETE** ```/posts/:id```
-**Response (200):**
+### **5. Delete Post**
+### **DELETE** ```/posts/:id```
+### **Response (200):**
 ```
 {
   "message": "Post deleted"
@@ -265,11 +265,11 @@ Server running on port 3000
 
 **You can test the API using:**
 
-cURL commands (as shown above)
+**cURL commands (as shown above)**
 
 **Postman or Thunder Client**
 
-Browser (for GET requests only)
+**Browser (for GET requests only)**
 
 
 
