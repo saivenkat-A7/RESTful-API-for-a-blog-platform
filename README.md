@@ -26,6 +26,8 @@ git clone https://github.com/saivenkat-A7/RESTful-API-for-a-blog-platform.git
 cd RESTful-API-for-a-blog-platform
 ```
 
+### Note: We need to start Docker Engine
+
 ### Running with Docker
 Build and start the application:
 ```
@@ -62,6 +64,44 @@ Server running on port 3000
 | title    | String  | Not Null                                  |
 | content  | Text    | Not Null                                  |
 | authorId | Integer | Foreign Key → Authors.id, CASCADE on delete |
+
+
+Each post belongs to **exactly one author**.  
+The `authorId` column enforces the relationship between posts and authors.
+
+---
+
+### Relationship Explanation
+
+- One **Author** can have **many Posts**
+- Each **Post** belongs to **one Author**
+- The relationship is enforced using a **foreign key (`authorId`)**
+- When an author is deleted, all associated posts are **automatically deleted** using **CASCADE**
+
+This ensures **referential integrity** at the database level.
+
+---
+
+### Entity-Relationship Diagram (ERD)
+
+The following diagram represents the **one-to-many relationship** between `Author` and `Post`.
+
+
+<img width="1536" height="1024" alt="ChatGPT Image Dec 14, 2025, 05_55_30 PM" src="https://github.com/user-attachments/assets/4ca9b851-3da3-4a88-bf63-fdfd3ee9f21e" />
+
+
+
+
+**Legend:**
+- `PK` → Primary Key  
+- `FK` → Foreign Key  
+- `1 : *` → One-to-Many relationship  
+
+An **Author** can create multiple **Posts**, while each **Post** belongs to exactly one **Author**.
+Deleting an author will automatically delete all associated posts (**CASCADE delete**).
+
+
+
 
 
 ### API Documentation
@@ -261,6 +301,39 @@ Server running on port 3000
 **Postman or Thunder Client**
 
 **Browser (for GET requests only)**
+
+### ScreenShots
+
+<img width="1888" height="587" alt="Screenshot 2025-12-14 175911" src="https://github.com/user-attachments/assets/764d3594-d43e-4863-9823-6e396da922c1" />
+
+
+<img width="1919" height="940" alt="Screenshot 2025-12-14 175115" src="https://github.com/user-attachments/assets/97b85ee3-c31a-4cdc-9f64-877d8722d3e8" />
+
+<img width="1919" height="945" alt="Screenshot 2025-12-14 175136" src="https://github.com/user-attachments/assets/837cc402-095e-4988-b315-da58f72ad2cf" />
+
+<img width="1916" height="598" alt="Screenshot 2025-12-14 175207" src="https://github.com/user-attachments/assets/84bd7a77-b88b-45aa-abb9-db9712f12beb" />
+
+<img width="1918" height="604" alt="Screenshot 2025-12-14 175229" src="https://github.com/user-attachments/assets/0282b3b8-e1ff-48d3-aa3d-2e9724d694de" />
+
+<img width="1919" height="594" alt="Screenshot 2025-12-14 175314" src="https://github.com/user-attachments/assets/5c1344fe-5f6d-4d66-b7e2-a84346371229" />
+
+### 404 Bad Request
+
+<img width="1919" height="575" alt="Screenshot 2025-12-14 175339" src="https://github.com/user-attachments/assets/f06e1b9c-0a84-44b8-acef-173ef5546e07" />
+
+
+<img width="1919" height="951" alt="Screenshot 2025-12-14 175405" src="https://github.com/user-attachments/assets/06ad3467-eb58-4f99-af88-ab6093c954e4" />
+
+
+
+
+<img width="1919" height="949" alt="Screenshot 2025-12-14 175423" src="https://github.com/user-attachments/assets/76b8e1b7-d141-4ae7-bfca-5cae598651e6" />
+
+<img width="1913" height="627" alt="Screenshot 2025-12-14 175456" src="https://github.com/user-attachments/assets/4b607628-e800-4d01-80ce-38078229af7c" />
+
+<img width="1909" height="598" alt="Screenshot 2025-12-14 175517" src="https://github.com/user-attachments/assets/fe7201ca-229f-449e-90f5-88c4d2675c3a" />
+
+
 
 
 
