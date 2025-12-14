@@ -25,17 +25,7 @@ The API allows users to:
 git clone https://github.com/saivenkat-A7/RESTful-API-for-a-blog-platform.git
 cd RESTful-API-for-a-blog-platform
 ```
-### Environment Variables
-Create a .env file in the root directory with the following:
-```
-PORT=3000
-DB_NAME=blogdb
-DB_USER=postgres
-DB_PASSWORD=postgres
-DB_HOST=postgres
-DB_PORT=5432
 
-```
 ### Running with Docker
 Build and start the application:
 ```
