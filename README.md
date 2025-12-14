@@ -122,7 +122,8 @@ Server running on port 3000
 ### **4. Update Author**
 ### **PUT** ```/authors/:id```
 ### **Body:**
-```{
+```
+{
   "name": "venkat"
 }
 ```
